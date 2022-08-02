@@ -99,30 +99,10 @@ class Array implements MarvellousSort
    {}
 
    public void SelectionSort()
-   {
-        int i = 0, j = 0, min_index = 0, temp = 0;
-
-        for(i = 0; i < Arr.length-1; i++)     // 1
-        {
-            min_index = i;
-            for(j = i+1; j < Arr.length; j++)     // 2
-            {
-                if(Arr[min_index] > Arr[j])
-                {
-                    min_index = j;
-                }
-            }
-            if(i != min_index)
-            {
-                temp = Arr[i];
-                Arr[i] = Arr[min_index];
-                Arr[min_index] = temp;
-            }
-        }
-   }
+   {}
 }
 
-class program380
+class program379
 {
     public static void main(String arr[])
     {
@@ -135,7 +115,7 @@ class program380
             aobj.Accept();
             aobj.Display();
 
-            aobj.SelectionSort();
+            aobj.BubbleSort('d');
             System.out.println("Data after sorting");
             aobj.Display();
     }

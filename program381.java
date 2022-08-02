@@ -96,7 +96,19 @@ class Array implements MarvellousSort
    }
 
    public void InsertionSort()
-   {}
+   {
+        int i = 0, j= 0, selected = 0;
+        //      1           2               3
+        for(i = 1; i < Arr.length; i++)     // 1
+        {
+            //              1                                           2                            3
+            for(j = i-1, selected = Arr[i]; (j >=0) && (Arr[j] > selected) ;j--)    // 2
+            {
+                Arr[j+1] = Arr[j];
+            }
+            Arr[j+1] = selected;
+        }
+   }
 
    public void SelectionSort()
    {
@@ -122,7 +134,7 @@ class Array implements MarvellousSort
    }
 }
 
-class program380
+class program381
 {
     public static void main(String arr[])
     {
@@ -135,7 +147,7 @@ class program380
             aobj.Accept();
             aobj.Display();
 
-            aobj.SelectionSort();
+            aobj.InsertionSort();
             System.out.println("Data after sorting");
             aobj.Display();
     }
